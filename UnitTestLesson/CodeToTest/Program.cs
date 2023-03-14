@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace CodeToTest
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             int timeOfDay = 21;
-            string greeting = Greeting(timeOfDay);
-            Console.WriteLine(greeting);
+            string greetings = Greeting(timeOfDay);
+            Console.WriteLine(greetings);
         }
 
-        private static string Greeting(int timeOfDay)
+        public static string Greeting(int timeOfDay)
         {
             string greeting;
             if (timeOfDay >= 5 && timeOfDay <= 12)
