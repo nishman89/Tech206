@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CodeToTest
 {
@@ -7,24 +8,26 @@ namespace CodeToTest
         static void Main(string[] args)
         {
             int timeOfDay = 21;
-            Greeting(timeOfDay);
-
+            string greeting = Greeting(timeOfDay);
+            Console.WriteLine(greeting);
         }
 
-        private static void Greeting(int timeOfDay)
+        private static string Greeting(int timeOfDay)
         {
+            string greeting;
             if (timeOfDay >= 5 && timeOfDay <= 12)
             {
-                Console.WriteLine("Good morning!");
+                greeting = "Good morning!";
             }
             else if (timeOfDay >= 12 && timeOfDay <= 18)
             {
-                Console.WriteLine("Good afternoon!");
+                greeting = "Good afternoon!";
             }
             else
             {
-                Console.WriteLine("Good evening!");
+                greeting = "Good evening!";
             }
+            return greeting;
         }
     }
 }
